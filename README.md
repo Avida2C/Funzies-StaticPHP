@@ -1,80 +1,94 @@
-
 # Funzies Collection
+<div><img src="https://img.shields.io/badge/HTML-eb5a00?style=flat" alt="HTML" /> <img src="https://img.shields.io/badge/CSS-006aff?style=flat" alt="CSS" /> <img src="https://img.shields.io/badge/Bootstrap-b319ff?style=flat" alt="Bootstrap" /> <img src="https://img.shields.io/badge/JavaScript-ffdd00?style=flat" alt="JavaScript" /> <img src="https://img.shields.io/badge/PHP-8fceff?style=flat" alt="PHP" /></div>
 
-<div>
-  <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=000000" alt="React" />
-  <img src="https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=ffffff" alt="Vite" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwindcss&logoColor=ffffff" alt="Tailwind CSS" />
-  <img src="https://img.shields.io/badge/DaisyUI-5A0EF8?style=flat&logo=daisyui&logoColor=ffffff" alt="DaisyUI" />
-  <img src="https://img.shields.io/badge/React_Router-CA4245?style=flat&logo=reactrouter&logoColor=ffffff" alt="React Router" />
-  <img src="https://img.shields.io/badge/Express-000000?style=flat&logo=express&logoColor=ffffff" alt="Express" />
-</div>
+Funzies is a robust e-commerce platform offering a wide array of collectibles for enthusiasts of all ages, making it the perfect destination for unique items like detailed car models and Funko Pop figurines. It's a prime choice for collectors seeking distinctive gifts and is designed for a seamless and comprehensive shopping experience.
 
-Funzies is a React storefront powered by Vite, Tailwind CSS, and DaisyUI. The repo also includes a small Express API used during local development.
+The platform empowers users with user-friendly navigation, detailed product insights, and efficient order processing, while also offering an extensive backend for administrative management.
+## Current Features
+### Main Features
+    Cross platform
+    User-Friendly Design
+    Search and Filter Options
+    Shopping Cart
+    Customer Accounts
+    Wish Lists
+    Social Media Integration
 
-## Tech stack
+### Admin Features
+    User Management
+    Role Management
+    Brand Management
+    Category Management
+    Product Managment
+    Order Management
+    
 
-- React
-- Vite
-- React Router
-- Tailwind CSS + DaisyUI
-- Express (local API)
-
-## Requirements
-
-- Node.js (recommended: latest LTS)
-- npm
-
-## Getting started
-
-Install dependencies:
-
+## Installation and Setup
+Download and Install XAMP
 ```bash
-npm install
+  https://www.apachefriends.org/
+```
+1. Launch XAMP / MAMP
+- Windows: Navigate to the Start Menu and search for XAMP Control Panel.
+- macOS: Navigate to the XAMP Folder and run 'manager-osx'.
+
+2. Once the program is open, click on Start.
+- Windows: Click start for both Apache and SQL. 
+- macOS: Click the start button at the upper-right side corner.
+
+### Testing Connection
+Test Appache: Open your web browser and visit:
+```bash
+http://localhost/
+```
+Access phpMyAdmin: You can manage your MySQL databases by visiting:
+```bash
+http://localhost/phpmyadmin/
+``` 
+
+## Deployment
+
+1. Unzip the downloaded folder and place the unzipped folder in: 
+```bash
+  C:\XAMPP\htdocs
+```
+2. Navigate into the unzipped folder and locate 'funzies.sql':
+```bash
+  C:\XAMPP\htdocs\Funzies\sql file
+```
+3. Copy the SQL file and paste it in a more accessible location.
+
+4. Go to:
+```bash
+  http://localhost/phpmyadmin/
+```
+5. In the top menu find and click on SQL
+
+6. Drag and drop 'funzies.sql' in the textbox. 
+
+7. Scroll down and find the button 'Go'. 
+
+8. Once the 'Go' button is clicked, a new database including its content is created.
+
+#### Accessing the website from windows OS should cause no issues once the sql file has been imported successfully. 
+
+### Additional steps for macOS users only:
+1. Find the connection.php file.
+```bash
+  C:\XAMPP\htdocs\Funzies\connection.php
+```
+2. Open the connection.php file through either Visual studio code or note/note++
+
+3. Change the dbPassword to root.
+```bash
+  $dbPassword = "root"; 
 ```
 
-Run the frontend only:
+## Running Tests
 
+To run tests:
 ```bash
-npm run dev
+  vendor\bin\phpunit tests\testing.php
 ```
 
-Run the API only:
-
-```bash
-npm run dev:api
-```
-
-Run frontend + API together:
-
-```bash
-npm run dev:stack
-```
-
-## API proxy (local dev)
-
-Vite proxies API requests to the local Express server:
-
-- Frontend: `http://localhost:5173`
-- API: `http://localhost:3001`
-- Proxy: requests to `/api/*` are forwarded to `http://localhost:3001`
-
-## Scripts
-
-- `npm run dev`: start Vite dev server
-- `npm run dev:api`: start local Express API (`server/index.mjs`)
-- `npm run dev:stack`: run app + API concurrently
-- `npm run build`: build production assets to `dist/`
-- `npm run preview`: preview the production build locally
-
-## Project structure (high level)
-
-- `src/`: React app (pages, components, routing)
-- `server/`: Express API
-- `dist/`: production build output (generated)
-
-## Notes
-
-- `dist/` is build output and is ignored by git.
-- Local env files are ignored (`.env`, `.env.*`). If you add one, don’t commit it.
-
+<img style="width:50%;" src="img/logo.png" alt="Website Logo">
